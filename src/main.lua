@@ -7,11 +7,12 @@ local ltn12 = require("ltn12")
 
 local system_content = "You are a Interpreter and you are to fix grammar mistakes in the following text"
 local user_content = arg[1]
+local API_KEY = os.getenv("AIML_API_KEY")
 
 local url = "https://api.aimlapi.com/v1/chat/completions"
 local headers = {
     ["Content-Type"] = "application/json",
-    ["Authorization"] = "Bearer API_KEY"
+    ["Authorization"] = "Bearer " .. API_KEY
 }
 local body = json.encode({
     model = "gpt-4o",
