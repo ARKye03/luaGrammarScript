@@ -1,4 +1,4 @@
-# README.md for main.lua
+# README.md
 
 This is a Lua script that interacts with an AI/ML API to fix grammar mistakes in a given text.
 
@@ -27,6 +27,13 @@ Run the script with a single argument, which is the text you want the AI to fix:
 
 ```sh
 lua main.lua "your text here"
+```
+
+or
+
+```sh
+chmod +x main.lua
+./main.lua "your text here"
 ```
 
 ## Error handling
