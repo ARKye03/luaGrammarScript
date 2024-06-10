@@ -8,15 +8,17 @@
       (system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
+          lua_packages = with pkgs.luaPackages; [
+            luasocket
+            luasec
+            cjson
+          ];
           shell = pkgs.mkShell {
             nativeBuildInputs = with pkgs.buildPackages; [
               lua
               nil
-              luaPackages.luasocket
-              luaPackages.luasec
-              luaPackages.cjson
               nixpkgs-fmt
-            ];
+            ] ++ lua_packages;
           };
         in
         {

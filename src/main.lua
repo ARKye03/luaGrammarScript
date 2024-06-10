@@ -11,7 +11,7 @@ local user_content = arg[1]
 local url = "https://api.aimlapi.com/v1/chat/completions"
 local headers = {
     ["Content-Type"] = "application/json",
-    ["Authorization"] = "Bearer d0e0a2b9c66449eaba13fed3fa37f7aa"
+    ["Authorization"] = "Bearer API_KEY"
 }
 local body = json.encode({
     model = "gpt-4o",
